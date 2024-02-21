@@ -2,13 +2,13 @@
   {
     "modid": "${id}",
     "name": "${name}",
-    "description": "",
+    "description": "Hide players that are near you",
     "version": "${version}",
     "mcversion": "1.8.9",
-    "url": "",
+    "url": "https://modrinth.com/mod/shy",
     "updateUrl": "",
     "authorList": [
-      "Your Name"
+      "Microcontrollers"
     ],
     "credits": "",
     "logoFile": "",

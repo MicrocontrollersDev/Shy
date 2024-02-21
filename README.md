@@ -1,16 +1,17 @@
-# OneConfigExampleMod
+# Shy
 
-![Powered by OneConfig](https://polyfrost.org/media/branding/badges/badge_1.svg)
-![Compact Powered by OneConfig](https://polyfrost.org/media/branding/badges/badge_2.svg)
-![Minimal Powered by OneConfig](https://polyfrost.org/media/branding/badges/badge_3.svg)
-![Minimal Compact Powered by OneConfig](https://polyfrost.org/media/branding/badges/badge_4.svg)
+[![OneConfig]](https://modrinth.com/mod/oneconfig)
 
-Example mod implementing OneConfig.
+Let's you hide entities when you get close to them. Very configurable!
 
-## How to use
+## Download
 
-- Copy the template either by using GitHub's "Use this template" feature or downloading the repo manually.
-- **Remove the license named "LICENSE-TEMPLATE" and choose a new one.**
-- Refactor the template (specifically, the modid, version and name in the gradle.properties and most of the class names)
-  to a different name.
-- Have fun modding! :D
+Download from [Modrinth](https://modrinth.com/mod/shy).
+
+### Discord
+
+My Discord - https://discord.gg/rejfv9kFJj
+
+### Notes
+
+This mod uses OneConfig for its config. OneConfig will automatically be downloaded on launch if it is not already installed.

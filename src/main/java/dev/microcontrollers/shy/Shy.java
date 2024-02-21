@@ -1,11 +1,11 @@
-package org.polyfrost.example;
+package dev.microcontrollers.shy;
 
-import org.polyfrost.example.command.ExampleCommand;
-import org.polyfrost.example.config.TestConfig;
 import cc.polyfrost.oneconfig.events.event.InitializationEvent;
+import dev.microcontrollers.shy.event.ShyHider;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
-import cc.polyfrost.oneconfig.utils.commands.CommandManager;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import dev.microcontrollers.shy.config.ShyConfig;
 
 /**
  * The entrypoint of the Example Mod that initializes it.
@@ -13,20 +13,20 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
  * @see Mod
  * @see InitializationEvent
  */
-@Mod(modid = ExampleMod.MODID, name = ExampleMod.NAME, version = ExampleMod.VERSION)
-public class ExampleMod {
+@Mod(modid = Shy.MODID, name = Shy.NAME, version = Shy.VERSION)
+public class Shy {
     public static final String MODID = "@ID@";
     public static final String NAME = "@NAME@";
     public static final String VERSION = "@VER@";
     // Sets the variables from `gradle.properties`. See the `blossom` config in `build.gradle.kts`.
     @Mod.Instance(MODID)
-    public static ExampleMod INSTANCE; // Adds the instance of the mod, so we can access other variables.
-    public static TestConfig config;
+    public static Shy INSTANCE; // Adds the instance of the mod, so we can access other variables.
+    public static ShyConfig config;
 
     // Register the config and commands.
     @Mod.EventHandler
     public void onInit(FMLInitializationEvent event) {
-        config = new TestConfig();
-        CommandManager.INSTANCE.registerCommand(new ExampleCommand());
+        config = new ShyConfig();
+        MinecraftForge.EVENT_BUS.register(new ShyHider());
     }
 }
