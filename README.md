@@ -1,6 +1,6 @@
 # Shy
 
-[![OneConfig]](https://modrinth.com/mod/oneconfig)
+[![OneConfig](https://github.com/MicrocontrollersDev/Shy/assets/66657148/1e30d35e-73fc-4690-bfc3-ed1dda294690)](https://modrinth.com/mod/oneconfig)
 
 Let's you hide entities when you get close to them. Very configurable!
 
