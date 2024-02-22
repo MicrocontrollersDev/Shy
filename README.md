@@ -4,6 +4,13 @@
 
 Let's you hide entities when you get close to them. Very configurable!
 
+Options include:
+- Master Toggle
+- Ignore Mobs
+- Ignore NPCs
+- Ignore Armor Stands
+- Distance Slider (0 to 10)
+
 ## Download
 
 Download from [Modrinth](https://modrinth.com/mod/shy).
