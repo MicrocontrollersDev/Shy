@@ -30,30 +30,29 @@ public class ShyConfig extends Config {
 
     @Switch(
             name = "Ignore NPCs",
-            description = "When enabled, NPCs on Hypixel will still render when near, but their armorstands will not. Check \"Ignore Armorstands\" for that.",
+            description = "When enabled, NPCs on Hypixel will still render when near, but their armorstands will not. Check \"Ignore Armor Stands\" for that.",
             subcategory = "General"
     )
     public static boolean ignoreNPCs = true;
 
     @Switch(
-            name = "Ignore Armorstands",
-            description = "When enabled, Armorstands will still render when near.",
+            name = "Ignore Armor Stands",
+            description = "When enabled, Armor Stands will still render when near.",
             subcategory = "General"
     )
-    public static boolean ignoreArmorstands = true;
+    public static boolean ignoreArmorStands = true;
 
     @Slider(
             name = "Distance Slider",
             description = "Measured in blocks.",
             subcategory = "General",
-            min = 0, max = 10,
-            step = 1
+            min = 0F, max = 10F
     )
-    public static int distance = 10;
+    public static float distance = 10F;
 
     @Button(
             name = "Join the Discord",
-            text = "Click!",
+            text = "Click",
             subcategory = "Socials"
     )
     Runnable discord = () -> {
@@ -66,11 +65,30 @@ public class ShyConfig extends Config {
         }
     };
 
+    @Button(
+            name = "Check Out My Other Mods",
+            text = "Click",
+            subcategory = "Socials"
+    )
+    Runnable modrinth = () -> {
+        if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
+            try {
+                Desktop.getDesktop().browse(new URI("https://modrinth.com/user/Microcontrollers"));
+            } catch (IOException | URISyntaxException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    };
+
     public ShyConfig() {
-        super(new Mod(Shy.NAME, ModType.UTIL_QOL), Shy.MODID + ".json");
+        super(new Mod(Shy.NAME, ModType.UTIL_QOL, "/shy.png"), Shy.MODID + ".json");
         initialize();
 
-        addDependency("hypixelCheck", "enabled");
+        addDependency("hypixelCheck", "toggled");
+        addDependency("ignoreMobs", "toggled");
+        addDependency("ignoreNPCs", "toggled");
+        addDependency("ignoreArmorStands", "toggled");
+        addDependency("distance", "toggled");
     }
 }
 
