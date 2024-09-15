@@ -1,3 +1,5 @@
+# Moved to https://codeberg.org/MicrocontrollersDev/Shy
+
 # Shy
 
 [![OneConfig](https://github.com/MicrocontrollersDev/Shy/assets/66657148/1e30d35e-73fc-4690-bfc3-ed1dda294690)](https://modrinth.com/mod/oneconfig)
